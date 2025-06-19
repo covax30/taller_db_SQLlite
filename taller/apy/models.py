@@ -22,9 +22,7 @@ class Equipo(models.Model):
 class Mantenimiento(models.Model):
     equipo = models.ForeignKey(Equipo, on_delete=models.CASCADE)
     tipo = models.ForeignKey(TipoMantenimiento, on_delete=models.SET_NULL, null=True)
-    fecha = models.DateField()
     descripcion = models.TextField()
-    realizado_por = models.CharField(max_length=100)
     observaciones = models.TextField(blank=True, null=True)
 
     def __str__(self):
