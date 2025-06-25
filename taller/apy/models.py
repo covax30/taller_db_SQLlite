@@ -154,16 +154,21 @@ class Proveedores(models.Model):
     correo = models.EmailField(unique=True)
     
     def __str__(self):
-        return self.nombre
-
-class Mantenimiento(models.Model):
-    equipo = models.ForeignKey(Equipo, on_delete=models.CASCADE)
-    tipo = models.ForeignKey(TipoMantenimiento, on_delete=models.SET_NULL, null=True)
+        return f"{self.id_proveedor} {self.correo}"
+    
+#--------------Modulo Pagos-----------------
+class Pagos(models.Model):
+    id_pago = models.AutoField(primary_key=True)
+    tipo_pago = models.CharField(max_length=100)
     fecha = models.DateField()
-    descripcion = models.TextField()
-    realizado_por = models.CharField(max_length=100)
-    observaciones = models.TextField(blank=True, null=True)
-
+    hora = models.TimeField()
+    monto = models,models.DecimalField(max_digits=10, decimal_places=2)
+    id_proveedor = models.ForeignKey(Proveedores, on_delete=models.CASCADE)
+    id_admin = models.ForeignKey(Administrador, on_delete=models.CASCADE)
+    id_herramienta = models.ForeignKey(Herramienta, on_delete=models.CASCADE)
+    id_insumos = models.ForeignKey(Insumos, on_delete=models.CASCADE)
+    id_repuestos = models.ForeignKey(Repuesto, on_delete=models.CASCADE)
+    
     def __str__(self):
         return f"{self.id_pago} {self.monto}"
     
