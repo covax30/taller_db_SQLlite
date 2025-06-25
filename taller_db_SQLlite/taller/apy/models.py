@@ -50,3 +50,4 @@ class Marca(models.Model):
    # class Meta:
        # verbose_name = 'Marca'
         #verbose_name_plural = 'Marcas'  
+        #hola
