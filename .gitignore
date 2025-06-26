@@ -1,12 +1,24 @@
-.venv
- HEAD
+# Python
+*.pyc
+__pycache__/
+
+# Entornos virtuales
+.venv/
+venv/
+.env
+
+# Base de datos local
 db.sqlite3
 
-db.sqlite3
- 796aeae4f5a247217655309dff9bd77dba27d4ae
-*.pyc
-__pycache__/
-*.pyc
-__pycache__/
-*.pyc
-__pycache__/
+# Archivos generados por Django
+/media/
+staticfiles/
+*.log
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
