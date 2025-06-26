@@ -26,4 +26,10 @@ urlpatterns = [
     path('Modulo Proveedores/', vista_proveedores),
     path('Modulo Pagos/', vista_pagos),
     
+    path('Modulo Entrada Vehiculos/', vista_entrada_vehiculos),
+    path('Modulo Salida Vehiculos/', vista_salida_vehiculos),
+    path('Modulo Vehiculos/', vista_vehiculos),
+    path('Modulo Clientes/', vista_clientes),
+    path('Modulo Compras/', vista_compras),
+    
 ]

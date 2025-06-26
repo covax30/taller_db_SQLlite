@@ -62,7 +62,6 @@ class Compra(models.Model):
 #------ MODULOS ERICK ---------
 #------ ENTIDAD de TIPO mantenmimiento ---------1
 class TipoMantenimiento(models.Model):
-    id = models.CharField(max_length=50, unique=True)
     nombre = models.CharField(max_length=50, unique=True)
 
     def __str__(self):
